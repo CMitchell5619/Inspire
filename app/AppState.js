@@ -1,3 +1,5 @@
+import Image from "./Models/image.js"
+import Task from "./Models/Task.js"
 import Weather from "./Models/Weather.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -5,9 +7,10 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
   /** @type {Weather} */
   weather = null
+  
 
   tasks = []
-
+/** @type {Image} */
   image = null
 
   quote = null
