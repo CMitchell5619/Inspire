@@ -3,6 +3,15 @@ import Task from "../Models/Task.js"
 import { sandboxApi } from "./AxiosService.js"
 
 class TodoService {
+    async deleteTask(id) {
+        try {
+            const res = await sandboxApi.delete(`christophermitchell/todos/${id}`)
+            console.log(res);
+            this.getTasks()
+        } catch (error) {
+            console.error(error);
+        }
+    }
     constructor() {
         this.getTasks()
         
@@ -21,7 +30,8 @@ class TodoService {
     async createTask(newTask) {
         try {
             const res = await sandboxApi.post('christophermitchell/todos/', newTask)
-            console.log(res);
+            console.log(res)
+            this.getTasks()
         } catch (error) {
             console.error(error);
         }

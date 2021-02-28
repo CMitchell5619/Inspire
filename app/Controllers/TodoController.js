@@ -10,7 +10,7 @@ function _draw() {
 
 export default class TodoController{
     constructor() {
-
+        ProxyState.on('tasks', _draw)
     }
 
     createTask(event){
@@ -20,5 +20,10 @@ export default class TodoController{
         let newTask = {description: form.task.value}
         console.log(newTask);
         todoService.createTask(newTask)
+    }
+
+    deleteTask(id){
+        console.log(id, "help");
+        todoService.deleteTask(id)
     }
 }

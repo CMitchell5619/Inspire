@@ -10,6 +10,7 @@ class App {
   todoController = new TodoController();
   quoteController = new QuoteController();
   imageController = new ImageController();
+  
 }
 
 window["app"] = new App();
