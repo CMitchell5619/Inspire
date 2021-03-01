@@ -22,6 +22,10 @@ export default class TodoController{
         todoService.createTask(newTask)
     }
 
+    completeTask(id){
+        todoService.completeTask(id);
+    }
+
     deleteTask(id){
         console.log(id, "help");
         todoService.deleteTask(id)

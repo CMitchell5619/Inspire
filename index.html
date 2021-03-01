@@ -10,7 +10,7 @@
     <title>inspire</title>
 </head>
 
-<body class="img-fluid" style="background-image: url('')">
+<body class="img-fluid" style="background-image: url(''); background-repeat: no-repeat; background-size: cover;">
     <header>
         <!-- <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
@@ -47,7 +47,9 @@
             <div class="col-3 d-flex justify-content-end">
                 <div class="row">
                     <div class="col">
-                        <ul id="todos" class=""></ul>
+                        <div class="card" style="background-color: black; opacity: .7;">
+                            <div id="todos-amount"></div>
+                            <div class="card-body" id="todos"></div>
                         <form class="form-inline" onsubmit="app.todoController.createTask(event)">
                             <div class="form-group">
                                 <input type="text" name="task" id="task" class="form-control" placeholder="to-do"
