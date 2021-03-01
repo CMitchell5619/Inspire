@@ -18,7 +18,3 @@ export default class Task {
         `
     }
 }
-
-
-{/* <li onclick="" class="list-group-item bg-dark text-light">${this.name}<button type="button" class="text-light close"
-onclick="app.todoController.deleteTask('${this.id}')"><span>&times;</span></button></li> */}
